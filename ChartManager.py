@@ -25,6 +25,18 @@ class ChartManager():
         self.fig.line('x', 'y', source=source, alpha=0.5, line_width=2, legend="sin")
         self.fig.circle('x', 'y', source=source, size=6, legend="sin")
 
+        callback = CustomJS(args=dict(source=source), code="""
+
+
+
+
+                    // What needs to go here??
+
+
+                """)
+
+        source.js_on_change("stream", callback)
+
 
 
     def getLineAsDiv(self):
