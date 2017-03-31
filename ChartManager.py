@@ -31,6 +31,13 @@ class ChartManager():
         script, div = components(self.fig)
         return script, div
 
+    def get_new_data_point(self):
+        mu, sigma = 0, 0.1  # mean and standard deviation
+        x = np.random.normal(mu, sigma, 1)[0]
+
+        return x
+
+
 
 if __name__ == '__main__':
     c = ChartManager()
